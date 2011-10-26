@@ -96,7 +96,7 @@ function checkout_pane_example_pane_settings_form($checkout_pane) {
  */
 function checkout_pane_example_pane_checkout_form($form, &$form_state, $checkout_pane, $order) {
 
-  $form['nickname'] = array(
+  $pane_form['nickname'] = array(
     '#type' => 'textfield',
     '#title' => t('Your nickname'),
     '#description' => t("We'd like to call you by your nickname."),
@@ -106,7 +106,7 @@ function checkout_pane_example_pane_checkout_form($form, &$form_state, $checkout
 
   if (variable_get('checkout_pane_example_request_another_email', FALSE)) {
     // Note we're not using theme_username() to avoid linking out of checkout.
-    $form['another_email'] = array(
+    $pane_form['another_email'] = array(
       '#type' => 'textfield',
       '#title' => t('Another e-mail address'),
       '#description' => t('Please give us a second email address.'),
@@ -115,7 +115,7 @@ function checkout_pane_example_pane_checkout_form($form, &$form_state, $checkout
     );
   }
 
-  return $form;
+  return $pane_form;
 }
 
 /**
