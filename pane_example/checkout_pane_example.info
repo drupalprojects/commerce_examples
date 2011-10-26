@@ -1,0 +1,5 @@
+name = Checkout Pane Example
+description = Demonstrates providing an additional checkout pane
+package = Commerce (contrib)
+dependencies[] = commerce_checkout
+core = 7.x
