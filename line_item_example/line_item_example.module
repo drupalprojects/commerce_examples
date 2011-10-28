@@ -34,9 +34,10 @@ function line_item_example_info_page() {
  */
 function line_item_example_enable() {
 
-  // Here we'll use commerce_product_line_item_configuration(), which adds the
-  // 'commerce_product' field to the line item. If we didn't need that field,
+  // Here we'll use the standard configuration functions, which add the necessary
+  // fields to the line item. If we didn't need those fields,
   // we could do less.
+  commerce_line_item_configure_line_item_type('example_line_item');
   commerce_product_line_item_configuration('example_line_item');
 }
 
