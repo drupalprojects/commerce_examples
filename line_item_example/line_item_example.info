@@ -1,0 +1,5 @@
+name = Line Item Example
+description = Demonstrates Line Item APIs for Commerce, including adding custom line items
+package = Commerce (contrib)
+dependencies[] = commerce_line_item
+core = 7.x
