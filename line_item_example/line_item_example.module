@@ -30,21 +30,10 @@ function line_item_example_info_page() {
 }
 
 /**
- * Implements hook_enable() to provide a new line item type.
- */
-function line_item_example_enable() {
-
-  // Here we'll use the standard configuration functions, which add the necessary
-  // fields to the line item. If we didn't need those fields,
-  // we could do less.
-  commerce_line_item_configure_line_item_type('example_line_item');
-  commerce_product_line_item_configuration('example_line_item');
-}
-
-/**
  * Implements hook_commerce_line_item_type_info().
  *
  * @see hook_commerce_line_item_type_info().
+ * @see http://www.drupalcommerce.org/specification/info-hooks/checkout
  *
  */
 function line_item_example_commerce_line_item_type_info() {
@@ -62,9 +51,11 @@ function line_item_example_commerce_line_item_type_info() {
 }
 
 /**
- * Implements hook_commerce_line_item_type_info_alter() to change the standard
- * 'product' line item type's 'add_form_submit_value'.
+ * Implements hook_commerce_line_item_type_info_alter().
+ *
  * Note that this only runs when the cache is cleared.
+ *
+ * Here we change the friendly name of the "product" line item type to "Widgets"
  *
  * @see hook_commerce_line_item_type_info_alter().
  *
