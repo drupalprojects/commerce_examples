@@ -1,0 +1,6 @@
+name = Checkout Page Example
+description = Demonstrates providing an additional checkout page
+package = Commerce (contrib)
+dependencies[] = commerce_checkout
+dependencies[] = checkout_page_example
+core = 7.x

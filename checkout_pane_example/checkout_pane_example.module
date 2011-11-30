@@ -12,7 +12,7 @@
  */
 function checkout_pane_example_menu() {
   $items['commerce_examples/checkout_pane_example'] = array(
-    'title' => 'Pane Example',
+    'title' => 'Checkout Pane Example',
     'page callback' => 'checkout_pane_example_info_page',
     'access callback' => TRUE,
   );
@@ -39,7 +39,7 @@ function checkout_pane_example_info_page() {
 function checkout_pane_example_commerce_checkout_pane_info() {
 
   $panes['checkout_pane_example'] = array(
-    'title' => t('Pane Example'),
+    'title' => t('Checkout Pane Example'),
     'base' => 'checkout_pane_example_pane',
 
     // The checkout page where this should be displayed by default.
@@ -159,11 +159,13 @@ function checkout_pane_example_pane_review($form, $form_state, $checkout_pane, $
     '#title' => t('Nickname'),
     '#markup' => check_plain($order->data['nickname']),
   );
-  $content['another_email'] = array(
-    '#type' => 'item',
-    '#title' => t('Another Email address'),
-    '#markup' => check_plain($order->data['another_email']),
-  );
+  if (!empty($order->data['another_email'])) {
+    $content['another_email'] = array(
+      '#type' => 'item',
+      '#title' => t('Another Email address'),
+      '#markup' => check_plain($order->data['another_email']),
+    );
+  }
   return drupal_render($content);
 }
 
