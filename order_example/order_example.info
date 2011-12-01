@@ -1,0 +1,6 @@
+name = Order Example
+description = Demonstrates custom order types, adding a line item to an order, etc.
+package = Commerce (contrib)
+dependencies[] = commerce_order
+dependencies[] = commerce_cart
+core = 7.x
