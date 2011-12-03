@@ -1,0 +1,5 @@
+name = Product Example
+description = Demonstrates product creation, etc.
+package = Commerce (contrib)
+dependencies[] = commerce_product
+core = 7.x
