@@ -1,7 +1,7 @@
 <?php
 /**
  * @file line_item_example.module
- * Demonstrates the addition of a new pane to the checkout system.
+ * Demonstrates the addition of a new line item type programatically
  *
  */
 
