@@ -41,12 +41,12 @@ function product_example_info_page($form, &$form_state) {
       '#options' => drupal_map_assoc(array_keys($types)),
     );
     $form['product_creation']['title'] = array(
-      '#type' => t('Product title'),
+      '#title' => t('Product title'),
       '#type' => 'textfield',
       '#default_value' => t('A dummy product for use with product_example'),
     );
     $form['product_creation']['price'] = array(
-      '#type' => t('Product price'),
+      '#title' => t('Product price'),
       '#type' => 'textfield',
       '#description' => t('A price in decimal format, without a currency symbol'),
       '#default_value' => '100.00',
