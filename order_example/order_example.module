@@ -238,7 +238,7 @@ function order_example_add_cart_submit($form, &$form_state) {
  * This order type (bundle) is not exposed on the current commerce admin pages
  * however.
  */
-function order_example_enable($modules) {
+function order_example_enable() {
   commerce_order_configure_order_type('order_example_order_type');
 }
 
