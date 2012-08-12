@@ -4,3 +4,4 @@ package = Commerce (contrib)
 dependencies[] = commerce_order
 dependencies[] = commerce_cart
 core = 7.x
+files[] = order_example.test
