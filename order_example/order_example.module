@@ -47,7 +47,7 @@ function order_example_info_page($form, &$form_state) {
     '#title' => t('User for whom the order will be created'),
     '#autocomplete_path' => 'user/autocomplete',
     '#description' => t('This technique requires a user.'),
-    '#default_value' => $GLOBALS['user']->name,
+    '#default_value' => format_username($GLOBALS['user']),
   );
   $form['order_creation']['product_to_add'] = array(
     '#type' => 'textfield',
